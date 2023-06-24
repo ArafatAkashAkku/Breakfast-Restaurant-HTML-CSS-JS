@@ -22,6 +22,25 @@ window.onscroll = () => {
 }
 
 // right click disable 
-document.oncontextmenu=(element)=>{
+document.oncontextmenu = (element) => {
     element.preventDefault();
 }
+
+// phone navigation bar version 
+const phonenavbar = document.querySelector("header .middle")
+const phonenav = document.querySelector(".fa-solid");
+phonenav.onclick = () => {
+    phonenavbar.classList.toggle("active");
+    if(phonenavbar.classList.contains("active")){
+        phonenav.classList.replace("fa-bars", "fa-xmark");
+    }else{
+        phonenav.classList.replace("fa-xmark", "fa-bars");
+    }
+}
+const link = document.querySelectorAll("header .middle nav ul li");
+link.forEach((element)=>{
+    element.onclick=()=>{
+        phonenavbar.classList.remove("active");
+        phonenav.classList.replace("fa-xmark", "fa-bars")
+    }
+})

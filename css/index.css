@@ -15,6 +15,11 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 /* html end  */
@@ -38,12 +43,12 @@ header .left img {
     width: 70%;
 }
 
-header .right {
+header .middle {
     display: flex;
     flex-direction: column;
 }
 
-header .right .upper {
+header .middle .upper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -53,17 +58,33 @@ header .right .upper {
     font-weight: bolder;
 }
 
-header .right .lower nav ul {
+header .middle .lower nav ul {
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-header .right .lower nav ul li a {
+header .middle .lower nav ul li a {
     color: brown;
     font-weight: bolder;
     text-transform: uppercase;
     font-size: 20px;
+}
+
+header .right {
+    display: none;
+}
+
+header .right .fa-bars {
+    color: brown;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header .right .fa-xmark {
+    color: brown;
+    font-size: 36px;
+    cursor: pointer;
 }
 
 /* header end  */
@@ -96,7 +117,7 @@ header .right .lower nav ul li a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 92vh;
+    height: 100vh;
 }
 
 #home .left {
@@ -127,7 +148,10 @@ header .right .lower nav ul li a {
 
 #home .right {
     width: 50%;
+}
 
+#home .right img {
+    width: 100%;
 }
 
 /* home section end  */
@@ -139,7 +163,7 @@ header .right .lower nav ul li a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
 }
 
 #menu .right {
@@ -260,7 +284,7 @@ header .right .lower nav ul li a {
     gap: 20px;
 }
 
-#event .left h1{
+#event .left h1 {
     color: brown;
     text-transform: uppercase;
     font-size: 25px;
@@ -268,7 +292,7 @@ header .right .lower nav ul li a {
     text-shadow: 2px 2px 2px brown;
 }
 
-#event .left p{
+#event .left p {
     color: black;
     font-size: 18px;
     line-height: 30px;
@@ -278,7 +302,7 @@ header .right .lower nav ul li a {
     width: 50%;
 }
 
-#event .right img{
+#event .right img {
     width: 100%;
 }
 
@@ -304,7 +328,7 @@ header .right .lower nav ul li a {
     display: block;
 }
 
-#snackbar p{
+#snackbar p {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -312,7 +336,7 @@ header .right .lower nav ul li a {
     padding: 16px;
 }
 
-#reload{
+#reload {
     font-size: 20px;
     cursor: pointer;
 }
