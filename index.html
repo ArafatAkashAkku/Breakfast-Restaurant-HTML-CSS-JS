@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,9 +15,173 @@
     <!-- website title  -->
     <title>Breakfast Restaurant</title>
 </head>
+
 <body>
-    
+    <!-- header start -->
+    <header id="navigation-bar">
+        <div class="left">
+            <img src="images/Home-Left-Logo.png" alt="Home-Left-Logo">
+        </div>
+        <div class="right">
+            <div class="upper">
+                <img src="images/Home-Right-Logo.png" alt="Home-Right-Logo">
+                <p>Express Delivery +880123456789</p>
+            </div>
+            <div class="lower">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#our-story">Our Story</a></li>
+                        <li><a href="#event">Event</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- main start  -->
+    <main>
+        <!-- progress bar section start  -->
+        <section>
+            <div class="progress">
+                <div class="highlight" id="bar-highlight"></div>
+            </div>
+        </section>
+        <!-- progress bar section end  -->
+        <!-- home section start  -->
+        <section id="home">
+            <div class="left">
+                <div>
+                    <p>It's a good time for the great taste of burgers</p>
+                </div>
+                <h1>Burger <br> Week</h1>
+            </div>
+            <div class="right">
+                <img src="images/Home-Right-Picture.png" alt="Home-Right-Picture">
+            </div>
+        </section>
+        <!-- home section end  -->
+        <!-- menu section start  -->
+        <section id="menu">
+            <div class="left">
+                <img src="images/Menu-Left-Burger.jpg" alt="Menu-Left-Burger">
+            </div>
+            <div class="right">
+                <img src="images/Menu-Right-Burger1.jpg" alt="Menu-Right-Burger1">
+                <img src="images/Menu-Right-Burger2.jpg" alt="Menu-Right-Burger2">
+            </div>
+        </section>
+        <!-- menu section end  -->
+        <!-- our story section start  -->
+        <section id="our-story">
+            <div class="upper">
+                <h3>Always Tasty Burger</h3>
+                <h1>Choose & Enjoy</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, architecto consequuntur quae
+                    molestias distinctio facilis in eum natus ut cumque?</p>
+            </div>
+            <div class="lower">
+                <div class="left">
+                    <img src="images/Our-Story-Left-Burger.png" alt="Our-Story-Left-Burger">
+                    <h1>Lorem, ipsum dolor.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, id!</p>
+                    <div>
+                        <a href="#">Order Now</a>
+                    </div>
+                </div>
+                <div class="middle">
+                    <img src="images/Our-Story-Middle-Burger.png" alt="Our-Story-Middle-Burger">
+                    <h1>Lorem, ipsum dolor.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, id!</p>
+                    <div>
+                        <a href="#">Order Now</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="images/Our-Story-Right-Burger.png" alt="Our-Story-Right-Burger">
+                    <h1>Lorem, ipsum dolor.</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, id!</p>
+                    <div>
+                        <a href="#">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- our story section end  -->
+        <!-- event section start  -->
+        <section id="event">
+            <div class="left">
+                <h1>Discover <br>Upcoming Events</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veniam mollitia consequatur
+                    aliquid est distinctio illo. Minus quibusdam id velit. Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Laudantium esse voluptatibus at quis reprehenderit amet asperiores? Nesciunt
+                    debitis temporibus sint.</p>
+            </div>
+            <div class="right">
+                <img src="images/Event-Burger.jpg" alt="Event-Burger">
+            </div>
+        </section>
+        <!-- event section end  -->
+        <!-- contact section start  -->
+        <section id="contact-us">
+
+        </section>
+        <!-- contact section end  -->
+        <!-- pwa update message section start  -->
+        <section>
+            <div id="snackbar">
+                <p><a id="reload">A new version of this app is available. Click here to update.</a></p>
+            </div>
+        </section>
+        <!-- pwa update message section end  -->
+    </main>
+    <!-- main end  -->
+    <!-- footer start  -->
+    <footer></footer>
+    <!-- footer end  -->
     <!-- external js link  -->
     <script src="js/index.js"></script>
+    <!-- PWA script  -->
+    <script>
+        // pwa installation updation 
+        // https://codyanhorn.tech/blog/pwa-reload-page-on-application-update
+        // every update requires the changes in cache name in sw.js file 
+        (function () {
+            // Track an updated flag and an activated flag.
+            // When both of these are flagged true the service worker was updated and activated.
+            let updated = false;
+            let activated = false;
+            navigator.serviceWorker.register('/sw.js').then(regitration => {
+                regitration.addEventListener("updatefound", () => {
+                    const worker = regitration.installing;
+                    worker.addEventListener('statechange', () => {
+                        if (worker.state === "activated") {
+                            // Here is when the activated state was triggered from the lifecycle of the service worker.
+                            // This will trigger on the first install and any updates.
+                            activated = true;
+                            checkUpdate();
+                        }
+                    });
+                });
+            });
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                // This will be triggered when the service worker is replaced with a new one.
+                // It does not just reload the page right away, so to make sure it is fully activated using the checkUpdate function.
+                updated = true;
+                checkUpdate();
+            });
+            function checkUpdate() {
+                let snackbar = document.getElementById('snackbar');
+                if (activated && updated) {
+                    snackbar.classList.add('show');
+                    document.getElementById('reload').addEventListener('click', function () {
+                        window.location.reload();
+                    });
+                }
+            }
+        })();
+    </script>
 </body>
 </html>

@@ -1,0 +1,339 @@
+/* css reset start  */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* css reset end  */
+
+/* html start  */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* html end  */
+
+/* header start  */
+
+header {
+    height: 8vh;
+    padding: 0 4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header .left img {
+    width: 70%;
+}
+
+header .right {
+    display: flex;
+    flex-direction: column;
+}
+
+header .right .upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    color: brown;
+    font-weight: bolder;
+}
+
+header .right .lower nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+header .right .lower nav ul li a {
+    color: brown;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+/* header end  */
+
+/* progress bar section start  */
+
+.progress {
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    top: 8vh;
+    z-index: 1000;
+}
+
+.highlight {
+    transition: width 0.5s linear;
+    width: 0%;
+    background-color: red;
+    height: 100%;
+}
+
+/* progress bar section end  */
+
+/* home section start  */
+
+#home {
+    background-image: url(../images/Home-Background.jpg);
+    width: 100%;
+    padding: 8vh 4vw 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 92vh;
+}
+
+#home .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+}
+
+#home .left div {
+    display: flex;
+}
+
+#home .left div p {
+    padding: 10px;
+    border-style: dashed;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#home .left h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: 2px 2px white;
+}
+
+#home .right {
+    width: 50%;
+
+}
+
+/* home section end  */
+
+/* menu section start  */
+
+#menu {
+    padding: 8vh 4vw 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+#menu .right {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* menu section end  */
+
+/* our story section start  */
+
+#our-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 8vh 4vw 0;
+    width: 100%;
+}
+
+#our-story .upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#our-story .upper h3 {
+    padding: 10px;
+    background-color: orange;
+    text-transform: uppercase;
+    color: brown;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+#our-story .upper h1 {
+    text-transform: uppercase;
+    color: brown;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#our-story .upper p {
+    font-size: 18px;
+}
+
+#our-story .lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#our-story .lower .left,
+#our-story .lower .right,
+#our-story .lower .middle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+#our-story .lower .left img,
+#our-story .lower .right img,
+#our-story .lower .middle img {
+    width: 70%;
+}
+
+#our-story .lower .left h1,
+#our-story .lower .right h1,
+#our-story .lower .middle h1 {
+    color: brown;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+#our-story .lower .left p,
+#our-story .lower .right p,
+#our-story .lower .middle p {
+    color: black;
+    font-size: 18px;
+}
+
+#our-story .lower .left a,
+#our-story .lower .right a,
+#our-story .lower .middle a {
+    color: white;
+    background-color: orange;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px 20px;
+}
+
+/* our story section end  */
+
+/* event section start  */
+
+#event {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8vh 4vw 0;
+    width: 100%;
+    gap: 20px;
+}
+
+#event .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#event .left h1{
+    color: brown;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px brown;
+}
+
+#event .left p{
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#event .right {
+    width: 50%;
+}
+
+#event .right img{
+    width: 100%;
+}
+
+/* event section end  */
+
+/* contact section start  */
+
+
+/* contact section end  */
+
+/* pwa update message section start */
+
+#snackbar {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    bottom: 30px;
+}
+
+#snackbar.show {
+    display: block;
+}
+
+#snackbar p{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+}
+
+#reload{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* pwa update message section end */
+
+/* custom scrollbar section start */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: yellow;
+    border-radius: 4px;
+    border: 1px solid yellow;
+}
+
+/* custom scrollbar section end */
