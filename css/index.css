@@ -164,6 +164,7 @@ header .right .fa-xmark {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 35px;
 }
 
 #menu .right {
@@ -310,8 +311,102 @@ header .right .fa-xmark {
 
 /* contact section start  */
 
+#contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 8vh 4vw 0;
+    width: 100%;
+    background-image: url("../images/Contact-Left-Picture.png"),url("../images/Contact-Right-Picture.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left,bottom right;
+}
+
+#contact-us .upper{
+    text-align: center;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+#contact-us .upper h1{
+    color: brown;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#contact-us .upper p{
+    color: brown;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#contact-us .lower form{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#contact-us .lower form input{
+    padding-left: 10px;
+}
+
+#contact-us .lower form input::placeholder{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#contact-us .lower form .left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+
+#contact-us .lower form .left input{
+    width: 70%;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+}
+
+#contact-us .lower form .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact-us .lower form .right input{
+    width: 70%;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+}
+
+#contact-us .lower form .right button{
+    width: 70%;
+    padding: 11px 0;
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: 1px solid black;
+}
 
 /* contact section end  */
+
+/* footer start  */
+
+
+
+
+/* footer end  */
 
 /* pwa update message section start */
 

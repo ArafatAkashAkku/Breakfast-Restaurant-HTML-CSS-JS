@@ -41,7 +41,7 @@
         border-radius: 10px;
     }
 
-    header .right{
+    header .right {
         display: block;
     }
 
@@ -80,4 +80,28 @@
     #event .right {
         width: 100%;
     }
+
+}
+
+@media screen and (max-width:800px) {
+
+    #contact-us{
+        background-image: none;
+    }
+
+    #contact-us .lower form {
+        flex-direction: column;
+    }
+
+    #contact-us .lower form .left,
+    #contact-us .lower form .right {
+        width: 100%;
+    }
+
+    #contact-us .lower form .left input,
+    #contact-us .lower form .right input,
+    #contact-us .lower form .right button {
+        width: 100%;
+    }
+
 }
