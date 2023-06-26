@@ -311,56 +311,56 @@ header .right .fa-xmark {
 
 /* contact section start  */
 
-#contact-us{
+#contact-us {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-    padding: 8vh 4vw 0;
+    padding: 8vh 4vw 2vh;
     width: 100%;
-    background-image: url("../images/Contact-Left-Picture.png"),url("../images/Contact-Right-Picture.png");
+    background-image: url("../images/Contact-Left-Picture.png"), url("../images/Contact-Right-Picture.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: top left,bottom right;
+    background-position: top left, bottom right;
 }
 
-#contact-us .upper{
+#contact-us .upper {
     text-align: center;
     display: flex;
     gap: 30px;
     flex-direction: column;
 }
 
-#contact-us .upper h1{
+#contact-us .upper h1 {
     color: brown;
     text-transform: uppercase;
     font-size: 25px;
     font-weight: bolder;
 }
 
-#contact-us .upper p{
+#contact-us .upper p {
     color: brown;
     text-transform: uppercase;
     font-size: 30px;
     font-weight: bolder;
 }
 
-#contact-us .lower form{
+#contact-us .lower form {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-#contact-us .lower form input{
+#contact-us .lower form input {
     padding-left: 10px;
 }
 
-#contact-us .lower form input::placeholder{
+#contact-us .lower form input::placeholder {
     text-transform: uppercase;
     font-weight: bolder;
 }
 
-#contact-us .lower form .left{
+#contact-us .lower form .left {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -368,28 +368,28 @@ header .right .fa-xmark {
     gap: 20px;
 }
 
-#contact-us .lower form .left input{
+#contact-us .lower form .left input {
     width: 70%;
     height: 40px;
     outline: none;
     border: 1px solid black;
 }
 
-#contact-us .lower form .right{
+#contact-us .lower form .right {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#contact-us .lower form .right input{
+#contact-us .lower form .right input {
     width: 70%;
     height: 40px;
     outline: none;
     border: 1px solid black;
 }
 
-#contact-us .lower form .right button{
+#contact-us .lower form .right button {
     width: 70%;
     padding: 11px 0;
     background-color: orange;
@@ -403,8 +403,97 @@ header .right .fa-xmark {
 
 /* footer start  */
 
+footer {
+    padding: 8vh 4vw 2vh;
+    background-image: url("../images/Footer-Background-Picture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 30px;
+    color: white;
+}
 
+footer .upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
 
+footer .upper .left img {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+footer .upper .left p {
+    font-size: 18px;
+    text-transform: none;
+}
+
+footer .upper .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .upper .right ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+footer .upper .right ul li p {
+    font-size: 15px;
+}
+
+footer .upper .right ul li i {
+    padding: 5px;
+    border-radius: 50%;
+}
+
+footer .upper .left,
+footer .lower .left,
+footer .upper .right,
+footer .lower .right {
+    width: 50%;
+}
+
+footer .lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer .lower .left p {
+    font-size: 15px;
+}
+
+footer .lower .left p a {
+    color: orange;
+}
+
+footer .lower .right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .lower .right ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer .lower .right ul li a {
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
 
 /* footer end  */
 
