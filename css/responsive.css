@@ -56,8 +56,12 @@
         width: 100%;
     }
 
+    #home .right {
+        text-align: center;
+    }
+
     #home .right img {
-        width: 100%;
+        width: 50%;
     }
 
     #menu {
@@ -85,6 +89,10 @@
 }
 
 @media screen and (max-width:900px) {
+
+    #home .right img {
+        width: 65%;
+    }
 
     footer .upper {
         flex-direction: column;
@@ -122,6 +130,10 @@
 
 @media screen and (max-width:800px) {
 
+    #home .right img {
+        width: 75%;
+    }
+
     #contact-us {
         background-image: none;
     }
@@ -138,6 +150,14 @@
     #contact-us .lower form .left input,
     #contact-us .lower form .right input,
     #contact-us .lower form .right button {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    #home .right img {
         width: 100%;
     }
 
